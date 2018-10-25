@@ -47,8 +47,8 @@ export default class Presentation extends React.Component {
                     </Text>
                     <Notes>
                         <p>
-                            Introduce myself the project, explain that I'm a collaborator. Shout out
-                            to oni's awesome maintainer, collaborators and community.
+                            {`Introduce myself the project, explain that I'm a collaborator. Shout out
+                            to oni's awesome maintainer, collaborators and community.`}
                         </p>
                     </Notes>
                 </Slide>
