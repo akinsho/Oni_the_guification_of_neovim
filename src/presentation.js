@@ -120,16 +120,18 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide>
-          <Heading>Who is Oni for?</Heading>
-          <Text>
+          <Heading size={6} textColor="primary" caps>
+            Who is Oni for?
+          </Heading>
+          <Text
+            margin="10px 0 0"
+            size={6}
+            textColor="secondary"
+            textAlign="left"
+          >
             Oni - aims to expand on the core vim experience by providing
             additional features and an enhanced GUI we try to ensure that as
-            many features as possible can be toggled or configured. The aim is
-            also to lessen the amount of time and effort that goes into setting
-            up vim (or at least of the visual aspects of setting up vim). We see
-            oni as being a good choice for vim users who want the features of an
-            IDE, or for new users who are curious about trying a fully fledged
-            modal editor
+            many features as possible can be toggled or configured.
           </Text>
           <Notes>
             This isn't to say that we purposely exclude any users however there
@@ -139,8 +141,29 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <Heading>Oni's Architecture</Heading>
-          <Text>
+          <Text
+            margin="10px 0 0"
+            size={6}
+            textColor="secondary"
+            textAlign="left"
+          >
+            The aim is also to lessen the amount of time and effort that goes
+            into setting up vim (or at least of the visual aspects of setting up
+            vim). We see oni as being a good choice for vim users who want the
+            features of an IDE, or for new users who are curious about trying a
+            fully fledged modal editor
+          </Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+          <Heading size={6} textColor="primary" caps>
+            Oni's Architecture
+          </Heading>
+          <Text
+            margin="10px 0 0"
+            size={6}
+            textColor="secondary"
+            textAlign="left"
+          >
             Oni is an electron app, written with React, Typescript
             commnunication with Neovim via the msgpack API.
           </Text>
@@ -151,23 +174,30 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide>
-          <Heading>Where are we now?</Heading>
-          <Text>
+          <Heading size={6} textColor="primary" caps>
+            Where are we now?
+          </Heading>
+          <Text
+            margin="10px 0 0"
+            size={6}
+            textColor="secondary"
+            textAlign="left"
+          >
             Some of Oni's most recently implemented features include -
           </Text>
           <List>
-            <ListItem>
+            <ListItem size={6}>
               Improved Syntax highlighting - based on textmate
             </ListItem>
-            <ListItem>
+            <ListItem size={6}>
               File explorer - which prioritises navigation via the keyboard
               using, vim like mappings
             </ListItem>
-            <ListItem>
+            <ListItem size={6}>
               VCS Integration - currently only Git is supported but the
               framework exists to add more vcs
             </ListItem>
-            <ListItem>
+            <ListItem size={6}>
               Achievements - This functionality is aimed at getting new users
               interested in learning to use vim
             </ListItem>
@@ -175,7 +205,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <Heading>Where are we going?</Heading>
-          <Text>
+          <Text
+            margin="10px 0 0"
+            size={6}
+            textColor="secondary"
+            textAlign="left"
+          >
             Performance has always been one of the major advantages of using
             vim, it has always had a very quick startup time and not been too
             memory intensive. We feel that whilst electron and typescript have
@@ -186,8 +221,9 @@ export default class Presentation extends React.Component {
         <Slide>
           <Text>
             We are prototyping Oni V2 - which will use a highly performant
-            Reasonml based desktop application framework we are developing called Revery. This
-            will eliminate the need to ship a chromium browser with the app.
+            Reasonml based desktop application framework we are developing
+            called Revery. This will eliminate the need to ship a chromium
+            browser with the app.
           </Text>
         </Slide>
       </Deck>
