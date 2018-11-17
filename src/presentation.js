@@ -1,5 +1,6 @@
 // Import React
 import React from "react";
+import styled from "react-emotion";
 
 // Import Spectacle Core tags
 import {
@@ -12,7 +13,8 @@ import {
   List,
   Slide,
   Text,
-  Notes
+  Notes,
+  S
 } from "spectacle";
 
 // Import theme
@@ -22,6 +24,7 @@ import createTheme from "spectacle/lib/themes/default";
 import bryan from "./images/bryan.png";
 import ryan from "./images/ryan.png";
 import manuel from "./images/manuel.jpg";
+import tal from "./images/tal.jpg";
 
 // Require CSS
 require("normalize.css");
@@ -38,6 +41,10 @@ const theme = createTheme(
     secondary: "Helvetica"
   }
 );
+
+const Figure = styled("figcaption")`
+  display: inline-block;
+`;
 
 export default class Presentation extends React.Component {
   render() {
@@ -61,7 +68,7 @@ export default class Presentation extends React.Component {
             </p>
           </Notes>
         </Slide>
-        <Slide>
+        <Slide textSize={5}>
           <p>Hi 👋🏾</p>
           <p>Software Developer @Monzo</p>
           <p>Twitter -> @Akin_So</p>
@@ -70,21 +77,22 @@ export default class Presentation extends React.Component {
           <Heading size={6}>The Team</Heading>
           <Layout>
             <Fill>
-              <figure style={{ display: "inline-block" }}>
-                <Image height="200px" width="250" src={bryan} />
+              <Figure>
+                <Image width="250px" src={bryan} />
                 <figcaption>Bryan</figcaption>
-              </figure>
-              <figure style={{ display: "inline-block" }}>
-                <Image height="200px" width="250" src={ryan} />
+              </Figure>
+              <Figure>
+                <Image width="250px" src={ryan} />
                 <figcaption>Ryan</figcaption>
-              </figure>
-              <figure style={{ display: "inline-block" }}>
-                <Image height="200px" width="250" src={manuel} />
+              </Figure>
+              <Figure>
+                <Image width="250px" src={manuel} />
                 <figcaption>Manuel</figcaption>
-              </figure>
-              <figure style={{ display: "inline-block" }}>
+              </Figure>
+              <Figure>
+                <Image width="250px" src={tal} />
                 <figcaption>Tal</figcaption>
-              </figure>
+              </Figure>
             </Fill>
           </Layout>
         </Slide>
@@ -120,10 +128,14 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide>
+          <Text margin="15px 0" size={6} textAlign="left">
+            But Oni does more than that.
+          </Text>
+          <br />
           <Text margin="10px 0 0" size={6} textAlign="left">
-            But Oni does more than that. Oni allows Neovim to have features of
-            an IDE such as integration with language servers, more advanced
-            syntax highlighting
+            Oni allows Neovim to have features of an IDE such as integration
+            with <S type="italic">language servers</S> & more{" "}
+            <S type="italic">advanced syntax highlighting</S>
           </Text>
           <Notes>
             <p>
