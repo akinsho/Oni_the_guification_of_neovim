@@ -56,8 +56,8 @@ export default class Presentation extends React.Component {
         transitionDuration={500}
         theme={theme}
       >
-        <Slide transition={["zoom"]}>
-          <Heading size={1} fit caps lineHeight={1}>
+        <Slide transition={["slide"]}>
+          <Heading size={1} fit lineHeight={1}>
             Oni: The GUI-fication of Neovim
           </Heading>
           <Text margin="10px 0 0" textColor="secondary" size={6}>
@@ -103,7 +103,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["fade"]}>
           <Heading size={6}>Talking Points</Heading>
-          <List>
+          <List textColor="secondary">
             <ListItem>What is Oni?</ListItem>
             <ListItem>Who is Oni for?</ListItem>
             <ListItem>Oni's Architecture</ListItem>
@@ -114,7 +114,7 @@ export default class Presentation extends React.Component {
             <p>Brief overview of what we are going to be talking about</p>
           </Notes>
         </Slide>
-        <Slide transition={["fade"]}>
+        <Slide transition={["slide"]}>
           <Heading size={6}>What is Oni?</Heading>
           <Text margin="10px  0" size={6} textAlign="left">
             Oni is a Graphical User Interface(GUI) for Neovim.
@@ -163,16 +163,16 @@ export default class Presentation extends React.Component {
                 Syntax Highlighting
               </Heading>
               <Image width="600px" src={syntaxHighlighting} />
-              <Text size={8}>Theme => Night Owl 😍</Text>
+              <Text textSize={24}>Theme => Night Owl 😍</Text>
             </Fill>
           </Layout>
         </Slide>
-        <Slide>
+        <Slide transition={["slide"]}>
           <Heading size={6}>Who is Oni for?</Heading>
           <Text margin="10px 0 0" size={6} textAlign="left">
-            Oni - aims to expand on the core vim experience by providing
-            additional features and an enhanced GUI we try to ensure that as
-            many features as possible can be toggled or configured.
+            Oni is a good choice for vim users who want the features of an IDE,
+            or for new users who are curious about trying a fully fledged modal
+            editor
           </Text>
           <Notes>
             This isn't to say that we purposely exclude any users however there
@@ -181,14 +181,7 @@ export default class Presentation extends React.Component {
             provide the right experience.
           </Notes>
         </Slide>
-        <Slide transition={["fade"]}>
-          <Text margin="10px 0 0" size={6} textAlign="left">
-            Oni as being a good choice for vim users who want the features of an
-            IDE, or for new users who are curious about trying a fully fledged
-            modal editor
-          </Text>
-        </Slide>
-        <Slide transition={["fade"]}>
+        <Slide transition={["slide"]}>
           <Heading size={6}>Oni's Architecture</Heading>
           <Text margin="10px 0 0" size={6} textAlign="left">
             Oni is an electron app, written with React & Typescript which speaks
@@ -204,24 +197,25 @@ export default class Presentation extends React.Component {
           <Heading size={6}>Where are we now?</Heading>
           <Layout>
             <Fill>
-              <Text size={6} textAlign="left">
+              <Text fit>
                 Some of Oni's most recently implemented features include -
               </Text>
               <List>
-                <ListItem size={6}>
-                  Improved Syntax highlighting - based on textmate
+                <ListItem textSize={28} margin="0 0 15px 0">
+                  Syntax highlighting based on Textmate
                 </ListItem>
-                <ListItem size={6}>
-                  File explorer - which prioritises navigation via the keyboard
-                  using, vim like mappings
+                <ListItem textSize={28} margin="0 0 15px 0">
+                  <S type="bold">File explorer</S> - which prioritises
+                  navigation via the keyboard using vim-like mappings
                 </ListItem>
-                <ListItem size={6}>
-                  VCS Integration - currently only Git is supported but the
-                  framework exists to add more vcs
+                <ListItem textSize={28} margin="0 0 15px 0">
+                  <S type="bold">Git Integration</S> - Only git is supported
+                  right now but the framework exists to add more version control
+                  providers
                 </ListItem>
-                <ListItem size={6}>
-                  Achievements - This functionality is aimed at getting new
-                  users interested in learning to use vim
+                <ListItem textSize={28} margin="0 0 15px 0">
+                  <S type="bold">Achievements</S> - This functionality is aimed
+                  at getting new users interested in learning to use vim
                 </ListItem>
               </List>
             </Fill>
