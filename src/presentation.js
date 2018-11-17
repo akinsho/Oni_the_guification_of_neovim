@@ -5,6 +5,7 @@ import styled from "react-emotion";
 // Import Spectacle Core tags
 import {
   Layout,
+  Code,
   Fill,
   Image,
   Deck,
@@ -25,6 +26,7 @@ import bryan from "./images/bryan.png";
 import ryan from "./images/ryan.png";
 import manuel from "./images/manuel.jpg";
 import tal from "./images/tal.jpg";
+import syntaxHighlighting from "./images/highlighting.png";
 
 // Require CSS
 require("normalize.css");
@@ -68,10 +70,13 @@ export default class Presentation extends React.Component {
             </p>
           </Notes>
         </Slide>
-        <Slide textSize={5}>
+        <Slide textSize={40}>
           <p>Hi 👋🏾</p>
-          <p>Software Developer @Monzo</p>
-          <p>Twitter -> @Akin_So</p>
+          <p>
+            Software Developer @Monzo
+            <br />
+            Twitter -> @Akin_So
+          </p>
         </Slide>
         <Slide textColor="tertiary">
           <Heading size={6}>The Team</Heading>
@@ -152,6 +157,17 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide>
+          <Layout>
+            <Fill>
+              <Heading size={5} margin="0 0 15px 0">
+                Syntax Highlighting
+              </Heading>
+              <Image width="600px" src={syntaxHighlighting} />
+              <Text size={8}>Theme => Night Owl 😍</Text>
+            </Fill>
+          </Layout>
+        </Slide>
+        <Slide>
           <Heading size={6}>Who is Oni for?</Heading>
           <Text margin="10px 0 0" size={6} textAlign="left">
             Oni - aims to expand on the core vim experience by providing
@@ -167,18 +183,16 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["fade"]}>
           <Text margin="10px 0 0" size={6} textAlign="left">
-            The aim is also to lessen the amount of time and effort that goes
-            into setting up vim (or at least of the visual aspects of setting up
-            vim). We see oni as being a good choice for vim users who want the
-            features of an IDE, or for new users who are curious about trying a
-            fully fledged modal editor
+            Oni as being a good choice for vim users who want the features of an
+            IDE, or for new users who are curious about trying a fully fledged
+            modal editor
           </Text>
         </Slide>
         <Slide transition={["fade"]}>
           <Heading size={6}>Oni's Architecture</Heading>
           <Text margin="10px 0 0" size={6} textAlign="left">
-            Oni is an electron app, written with React, Typescript
-            commnunication with Neovim via the msgpack API.
+            Oni is an electron app, written with React & Typescript which speaks
+            with Neovim via the <Code>msgpack</Code> API.
           </Text>
           <Notes>
             Describe the advantages (well supported, cross-platform) and
