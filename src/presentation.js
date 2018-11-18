@@ -1,5 +1,5 @@
 // Import React
-import React from "react";
+import React, { Component } from "react";
 import styled from "react-emotion";
 
 // Import Spectacle Core tags
@@ -25,14 +25,17 @@ import createTheme from "spectacle/lib/themes/default";
 // Import code snippets
 import pluginExample from "./example-plugin";
 
-// import team pics
+// import pics
 import bryan from "./images/bryan.png";
 import ryan from "./images/ryan.png";
 import manuel from "./images/manuel.jpg";
 import tal from "./images/tal.jpg";
 
 import oniLogo from "./images/oni-header.png";
+import gitblamePlugin from "./images/git_blame.png";
+import imageLayerPlugin from "./images/image_layer_plugin.png";
 import syntaxHighlighting from "./images/highlighting.png";
+import lspGif from "./images/lsp.gif";
 
 // Require CSS
 require("normalize.css");
@@ -54,7 +57,7 @@ const Figure = styled("figcaption")`
   display: inline-block;
 `;
 
-export default class Presentation extends React.Component {
+export default class Presentation extends Component {
   render() {
     return (
       <Deck
@@ -71,10 +74,8 @@ export default class Presentation extends React.Component {
             Akin Sowemimo
           </Text>
           <Notes>
-            <p>
-              {`Introduce myself the project, explain that I'm a collaborator. Shout out
-                to oni's awesome maintainer, collaborators and community.`}
-            </p>
+            Introduce myself the project, explain that I'm a collaborator. Shout
+            out to oni's awesome maintainer, collaborators and community.
           </Notes>
         </Slide>
         <Slide textSize={40}>
@@ -131,12 +132,10 @@ export default class Presentation extends React.Component {
             limitations of a terminal UI
           </Text>
           <Notes>
-            <p>
-              Discuss modal editing in brief (its vim conf so don't need to sell
-              this too hard). However vim has classically been bound to the
-              terminal although with the advent of neovim which can be embedded
-              inside other programs
-            </p>
+            Discuss modal editing in brief (its vim conf so don't need to sell
+            this too hard). However vim has classically been bound to the
+            terminal although with the advent of neovim which can be embedded
+            inside other programs
           </Notes>
         </Slide>
         <Slide>
@@ -164,15 +163,17 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide>
-          <Layout>
-            <Fill>
-              <Heading size={5} margin="0 0 15px 0">
-                Syntax Highlighting
-              </Heading>
-              <Image width="600px" src={syntaxHighlighting} />
-              <Text textSize={24}>Theme => Night Owl 😍</Text>
-            </Fill>
-          </Layout>
+          <Heading size={6} margin="0 0 25px 0">
+            Syntax Highlighting
+          </Heading>
+          <Image width="600px" src={syntaxHighlighting} />
+          <Text textSize={24}>Theme => Night Owl 😍</Text>
+        </Slide>
+        <Slide>
+          <Heading size={6} margin="0 0 25px 0">
+            Language Server Features
+          </Heading>
+          <Image src={lspGif} />
         </Slide>
         <Slide transition={["slide"]}>
           <Heading size={6}>Who is Oni for?</Heading>
@@ -224,6 +225,10 @@ export default class Presentation extends React.Component {
                   <S type="bold">Achievements</S> - This functionality is aimed
                   at getting new users interested in learning to use vim
                 </ListItem>
+                <ListItem textSize={28} margin="0 0 15px 0">
+                  <S type="bold">Browser Extension</S> - This allows users to
+                  open a browser as an oni split as an oni split.
+                </ListItem>
               </List>
             </Fill>
           </Layout>
@@ -232,11 +237,26 @@ export default class Presentation extends React.Component {
           <Heading size={6}>Extensibility</Heading>
           <Text>Oni can be extended via plugins.</Text>
           <br />
-          <Text margin="20px 0">
+          <CodePane lang="javascript" source={pluginExample} />
+          <Text textSize={25} margin="20px 0">
             It's API is documented here ->
             https://onivim.github.io/oni-api/globals.html
           </Text>
-          <CodePane lang="javascript" source={pluginExample} />
+        </Slide>
+        <Slide>
+          <Heading size={6}>Some Oni Plugins</Heading>
+        </Slide>
+        <Slide>
+          <Heading size={6} margin={2}>
+            Git Blame Plugin
+          </Heading>
+          <Image src={gitblamePlugin} />
+        </Slide>
+        <Slide>
+          <Heading size={6} margin={2}>
+            Image Layer Plugin
+          </Heading>
+          <Image src={imageLayerPlugin} />
         </Slide>
         <Slide>
           <Heading size={5}>Where are we going?</Heading>
