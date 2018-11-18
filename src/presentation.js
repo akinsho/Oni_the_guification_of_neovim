@@ -6,6 +6,7 @@ import styled from "react-emotion";
 import {
   Layout,
   Code,
+  CodePane,
   Fill,
   Image,
   Deck,
@@ -21,11 +22,16 @@ import {
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
 
+// Import code snippets
+import pluginExample from "./example-plugin";
+
 // import team pics
 import bryan from "./images/bryan.png";
 import ryan from "./images/ryan.png";
 import manuel from "./images/manuel.jpg";
 import tal from "./images/tal.jpg";
+
+import oniLogo from "./images/oni-header.png";
 import syntaxHighlighting from "./images/highlighting.png";
 
 // Require CSS
@@ -57,8 +63,9 @@ export default class Presentation extends React.Component {
         theme={theme}
       >
         <Slide transition={["slide"]}>
+          <Image src={oniLogo} />
           <Heading size={1} fit lineHeight={1}>
-            Oni: The GUI-fication of Neovim
+            The GUI-fication of Neovim
           </Heading>
           <Text margin="10px 0 0" textColor="secondary" size={6}>
             Akin Sowemimo
@@ -221,22 +228,42 @@ export default class Presentation extends React.Component {
             </Fill>
           </Layout>
         </Slide>
+        <Slide textSize={7}>
+          <Heading size={6}>Extensibility</Heading>
+          <Text>Oni can be extended via plugins.</Text>
+          <br />
+          <Text margin="20px 0">
+            It's API is documented here ->
+            https://onivim.github.io/oni-api/globals.html
+          </Text>
+          <CodePane lang="javascript" source={pluginExample} />
+        </Slide>
         <Slide>
           <Heading size={5}>Where are we going?</Heading>
           <Text margin="10px 0 0" size={6} textAlign="left">
             Performance has always been one of the major advantages of using
             vim, it has always had a very quick startup time and not been too
-            memory intensive. We feel that whilst electron and typescript have
-            provided us the advantages of the ecosystem the tradeoff re.
-            peformance might be too great. So...
+            memory intensive.
           </Text>
         </Slide>
         <Slide>
+          <Text margin="10px 0 0" size={6} textAlign="left">
+            We feel that whilst electron and typescript have provided us the
+            advantages of the ecosystem the tradeoff re. peformance might be too
+            great. So...
+          </Text>
+        </Slide>
+        <Slide>
+          <Text>We are prototyping Oni V2</Text>
+          <br />
           <Text>
-            We are prototyping Oni V2 - which will use a highly performant
-            Reasonml based desktop application framework we are developing
-            called Revery. This will eliminate the need to ship a chromium
-            browser with the app.
+            which will use a highly performant
+            <S type="bold"> ReasonML</S> based desktop application framework we
+            are developing called <S type="bold">Revery</S>.
+          </Text>
+          <Text margin="15px 0 0 0">
+            This will eliminate the need to ship a chromium browser with the
+            app.
           </Text>
         </Slide>
       </Deck>
