@@ -1,6 +1,6 @@
 // Import React
-import React, { Component } from "react";
-import styled from "react-emotion";
+import React, { Component } from 'react';
+import styled from 'react-emotion';
 
 // Import Spectacle Core tags
 import {
@@ -16,44 +16,46 @@ import {
   Slide,
   Text,
   Notes,
-  S
-} from "spectacle";
+  S,
+} from 'spectacle';
 
 // Import theme
-import createTheme from "spectacle/lib/themes/default";
+import createTheme from 'spectacle/lib/themes/default';
 
 // Import code snippets
-import pluginExample from "./example-plugin";
+import pluginExample from './example-plugin';
+import neovimIntegrationExample from './example-neovim-integration';
 
 // import pics
-import bryan from "./images/bryan.png";
-import ryan from "./images/ryan.png";
-import manuel from "./images/manuel.jpg";
-import tal from "./images/tal.jpg";
+import bryan from './images/bryan.png';
+import ryan from './images/ryan.png';
+import manuel from './images/manuel.jpg';
+import tal from './images/tal.jpg';
+import me from './images/akin.jpg';
 
-import oniLogo from "./images/oni-header.png";
-import gitblamePlugin from "./images/git_blame.png";
-import imageLayerPlugin from "./images/image_layer_plugin.png";
-import syntaxHighlighting from "./images/highlighting.png";
-import lspGif from "./images/lsp.gif";
+import oniLogo from './images/oni-header.png';
+import gitblamePlugin from './images/git_blame.png';
+import imageLayerPlugin from './images/image_layer_plugin.png';
+import syntaxHighlighting from './images/highlighting.png';
+import lspGif from './images/lsp.gif';
 
 // Require CSS
-require("normalize.css");
+require('normalize.css');
 
 const theme = createTheme(
   {
-    primary: "#03A9FC",
-    secondary: "white",
-    tertiary: "#1F2022",
-    quartenary: "#CECECE"
+    primary: '#03A9FC',
+    secondary: 'white',
+    tertiary: '#1F2022',
+    quartenary: '#CECECE',
   },
   {
-    primary: "Fira Code",
-    secondary: "Helvetica"
+    primary: 'Fira Code',
+    secondary: 'Helvetica',
   }
 );
 
-const Figure = styled("figcaption")`
+const Figure = styled('figcaption')`
   display: inline-block;
 `;
 
@@ -61,11 +63,11 @@ export default class Presentation extends Component {
   render() {
     return (
       <Deck
-        transition={["zoom", "slide"]}
+        transition={['zoom', 'slide']}
         transitionDuration={500}
         theme={theme}
       >
-        <Slide transition={["slide"]}>
+        <Slide transition={['slide']}>
           <Image src={oniLogo} />
           <Heading size={1} fit lineHeight={1}>
             The GUI-fication of Neovim
@@ -80,11 +82,8 @@ export default class Presentation extends Component {
         </Slide>
         <Slide textSize={40}>
           <p>Hi 👋🏾</p>
-          <p>
-            Software Developer @Monzo
-            <br />
-            Twitter -> @Akin_So
-          </p>
+          <p>Software Developer @ Monzo, UK</p>
+          <p>Twitter -> @Akin_So</p>
         </Slide>
         <Slide textColor="tertiary">
           <Heading size={6}>The Team</Heading>
@@ -106,15 +105,20 @@ export default class Presentation extends Component {
                 <Image width="250px" src={tal} />
                 <figcaption>Tal</figcaption>
               </Figure>
+              <Figure>
+                <Image width="250px" src={me} />
+                <figcaption>Akin</figcaption>
+              </Figure>
             </Fill>
           </Layout>
         </Slide>
-        <Slide transition={["fade"]}>
+        <Slide transition={['fade']}>
           <Heading size={6}>Talking Points</Heading>
           <List textColor="secondary">
             <ListItem>What is Oni?</ListItem>
             <ListItem>Who is Oni for?</ListItem>
             <ListItem>Oni's Architecture</ListItem>
+            <ListItem>Oni's Extensibility</ListItem>
             <ListItem>Where are we now?</ListItem>
             <ListItem>The Future of Oni</ListItem>
           </List>
@@ -122,7 +126,7 @@ export default class Presentation extends Component {
             <p>Brief overview of what we are going to be talking about</p>
           </Notes>
         </Slide>
-        <Slide transition={["slide"]}>
+        <Slide transition={['slide']}>
           <Heading size={6}>What is Oni?</Heading>
           <Text margin="10px  0" size={6} textAlign="left">
             Oni is a Graphical User Interface(GUI) for Neovim.
@@ -145,14 +149,14 @@ export default class Presentation extends Component {
           <br />
           <Text margin="10px 0 0" size={6} textAlign="left">
             Oni allows Neovim to have features of an IDE such as integration
-            with <S type="italic">language servers</S> & more{" "}
+            with <S type="italic">language servers</S> & more{' '}
             <S type="italic">advanced syntax highlighting</S>
           </Text>
           <Notes>
             <p>
               Its now possible to create an IDE with neovim at its core that
               provides the power and speed of modal editing combined with the
-              nicieites and utilties of a GUI IDE.{" "}
+              nicieites and utilties of a GUI IDE.{' '}
             </p>
             <p>
               A key difference between Oni and alternatives like vscode or
@@ -175,7 +179,7 @@ export default class Presentation extends Component {
           </Heading>
           <Image src={lspGif} />
         </Slide>
-        <Slide transition={["slide"]}>
+        <Slide transition={['slide']}>
           <Heading size={6}>Who is Oni for?</Heading>
           <Text margin="10px 0 0" size={6} textAlign="left">
             Oni is a good choice for vim users who want the features of an IDE,
@@ -189,7 +193,7 @@ export default class Presentation extends Component {
             provide the right experience.
           </Notes>
         </Slide>
-        <Slide transition={["slide"]}>
+        <Slide transition={['slide']}>
           <Heading size={6}>Oni's Architecture</Heading>
           <Text margin="10px 0 0" size={6} textAlign="left">
             Oni is an electron app, written with React & Typescript which speaks
