@@ -24,7 +24,6 @@ import createTheme from 'spectacle/lib/themes/default';
 
 // Import code snippets
 import pluginExample from './example-plugin';
-import neovimIntegrationExample from './example-neovim-integration';
 
 // import pics
 import bryan from './images/bryan.png';
