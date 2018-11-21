@@ -5,7 +5,6 @@ import styled from 'react-emotion';
 // Import Spectacle Core tags
 import {
   Layout,
-  Code,
   CodePane,
   Fill,
   Image,
@@ -115,7 +114,6 @@ export default class Presentation extends Component {
           <Heading size={6}>Talking Points</Heading>
           <List textColor="secondary">
             <ListItem>What is Oni?</ListItem>
-            <ListItem>Who is Oni for?</ListItem>
             <ListItem>Oni's Architecture</ListItem>
             <ListItem>Oni's Extensibility</ListItem>
             <ListItem>Where are we now?</ListItem>
@@ -179,24 +177,10 @@ export default class Presentation extends Component {
           <Image src={lspGif} />
         </Slide>
         <Slide transition={['slide']}>
-          <Heading size={6}>Who is Oni for?</Heading>
-          <Text margin="10px 0 0" size={6} textAlign="left">
-            Oni is a good choice for vim users who want the features of an IDE,
-            or for new users who are curious about trying a fully fledged modal
-            editor
-          </Text>
-          <Notes>
-            This isn't to say that we purposely exclude any users however there
-            are likely vim users who rely on vim's minimalism and portablility
-            and a such having to download an app with a gui shell will not
-            provide the right experience.
-          </Notes>
-        </Slide>
-        <Slide transition={['slide']}>
           <Heading size={6}>Oni's Architecture</Heading>
           <Text margin="10px 0 0" size={6} textAlign="left">
             Oni is an electron app, written with React & Typescript which speaks
-            with Neovim via the <Code>msgpack</Code> API.
+            with Neovim via it's <S type="italics">msgpack API</S>.
           </Text>
           <Notes>
             Describe the advantages (well supported, cross-platform) and
@@ -288,6 +272,26 @@ export default class Presentation extends Component {
             This will eliminate the need to ship a chromium browser with the
             app.
           </Text>
+        </Slide>
+        <Slide>
+          <Heading size={6}>Useful Links</Heading>
+          <List>
+            <ListItem textSize={25}>
+              Oni website - https://www.onivim.io/
+            </ListItem>
+            <ListItem textSize={25}>
+              Oni Repository - https://github.com/onivim/oni
+            </ListItem>
+            <ListItem textSize={25}>
+              Discord Link - https://discord.gg/7maEAxV
+            </ListItem>
+            <ListItem textSize={25}>
+              Revery - https://github.com/bryphe/revery
+            </ListItem>
+            <ListItem textSize={25}>
+              Revery Quick start - https://github.com/bryphe/revery-quick-start
+            </ListItem>
+          </List>
         </Slide>
       </Deck>
     );
