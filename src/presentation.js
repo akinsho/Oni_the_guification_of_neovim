@@ -1,6 +1,5 @@
-// Import React
-import React, { Component } from 'react';
-import styled from 'react-emotion';
+import React, { Component } from "react";
+import styled from "react-emotion";
 
 // Import Spectacle Core tags
 import {
@@ -15,45 +14,45 @@ import {
   Slide,
   Text,
   Notes,
-  S,
-} from 'spectacle';
+  S
+} from "spectacle";
 
 // Import theme
-import createTheme from 'spectacle/lib/themes/default';
+import createTheme from "spectacle/lib/themes/default";
 
 // Import code snippets
-import pluginExample from './example-plugin';
+import pluginExample from "./example-plugin";
 
 // import pics
-import bryan from './images/bryan.png';
-import ryan from './images/ryan.png';
-import manuel from './images/manuel.jpg';
-import tal from './images/tal.jpg';
-import me from './images/akin.jpg';
+import bryan from "./images/bryan.png";
+import ryan from "./images/ryan.png";
+import manuel from "./images/manuel.jpg";
+import tal from "./images/tal.jpg";
+import me from "./images/akin.jpg";
 
-import oniLogo from './images/oni-header.png';
-import gitblamePlugin from './images/git_blame.png';
-import imageLayerPlugin from './images/image_layer_plugin.png';
-import syntaxHighlighting from './images/highlighting.png';
-import lspGif from './images/lsp.gif';
+import oniLogo from "./images/oni-header.png";
+import gitblamePlugin from "./images/git_blame.png";
+import imageLayerPlugin from "./images/image_layer_plugin.png";
+import syntaxHighlighting from "./images/highlighting.png";
+import lspGif from "./images/lsp.gif";
 
 // Require CSS
-require('normalize.css');
+require("normalize.css");
 
 const theme = createTheme(
   {
-    primary: '#03A9FC',
-    secondary: 'white',
-    tertiary: '#1F2022',
-    quartenary: '#CECECE',
+    primary: "#03A9FC",
+    secondary: "white",
+    tertiary: "#1F2022",
+    quartenary: "#CECECE"
   },
   {
-    primary: 'Fira Code',
-    secondary: 'Helvetica',
+    primary: "Fira Code",
+    secondary: "Helvetica"
   }
 );
 
-const Figure = styled('figcaption')`
+const Figure = styled("figcaption")`
   display: inline-block;
 `;
 
@@ -61,11 +60,11 @@ export default class Presentation extends Component {
   render() {
     return (
       <Deck
-        transition={['zoom', 'slide']}
+        transition={["zoom", "slide"]}
         transitionDuration={500}
         theme={theme}
       >
-        <Slide transition={['slide']}>
+        <Slide transition={["slide"]}>
           <Image src={oniLogo} />
           <Heading size={1} fit lineHeight={1}>
             The GUI-fication of Neovim
@@ -110,7 +109,7 @@ export default class Presentation extends Component {
             </Fill>
           </Layout>
         </Slide>
-        <Slide transition={['fade']}>
+        <Slide transition={["fade"]}>
           <Heading size={6}>Talking Points</Heading>
           <List textColor="secondary">
             <ListItem>What is Oni?</ListItem>
@@ -123,7 +122,7 @@ export default class Presentation extends Component {
             <p>Brief overview of what we are going to be talking about</p>
           </Notes>
         </Slide>
-        <Slide transition={['slide']}>
+        <Slide transition={["slide"]}>
           <Heading size={6}>What is Oni?</Heading>
           <Text margin="10px  0" size={6} textAlign="left">
             Oni is a Graphical User Interface(GUI) for Neovim.
@@ -146,14 +145,14 @@ export default class Presentation extends Component {
           <br />
           <Text margin="10px 0 0" size={6} textAlign="left">
             Oni allows Neovim to have features of an IDE such as integration
-            with <S type="italic">language servers</S> & more{' '}
+            with <S type="italic">language servers</S> & more{" "}
             <S type="italic">advanced syntax highlighting</S>
           </Text>
           <Notes>
             <p>
               Its now possible to create an IDE with neovim at its core that
               provides the power and speed of modal editing combined with the
-              nicieites and utilties of a GUI IDE.{' '}
+              nicieites and utilties of a GUI IDE.{" "}
             </p>
             <p>
               A key difference between Oni and alternatives like vscode or
@@ -165,18 +164,18 @@ export default class Presentation extends Component {
         </Slide>
         <Slide>
           <Heading size={6} margin="0 0 25px 0">
-            Syntax Highlighting
+            Syntax Highlighting 😍
           </Heading>
           <Image width="600px" src={syntaxHighlighting} />
-          <Text textSize={24}>Theme => Night Owl 😍</Text>
+          <Text textSize={24}>Theme => Night Owl </Text>
         </Slide>
         <Slide>
           <Heading size={6} margin="0 0 25px 0">
-            Language Server Features
+            Language Server Features 💻
           </Heading>
           <Image src={lspGif} />
         </Slide>
-        <Slide transition={['slide']}>
+        <Slide transition={["slide"]}>
           <Heading size={6}>Oni's Architecture</Heading>
           <Text margin="10px 0 0" size={6} textAlign="left">
             Oni is an electron app, written with React & Typescript which speaks
@@ -197,7 +196,7 @@ export default class Presentation extends Component {
               </Text>
               <List>
                 <ListItem textSize={28} margin="0 0 15px 0">
-                  Syntax highlighting based on Textmate
+                  <S type="bold">Syntax highlighting</S> based on Textmate
                 </ListItem>
                 <ListItem textSize={28} margin="0 0 15px 0">
                   <S type="bold">File explorer</S> - which prioritises
@@ -222,7 +221,7 @@ export default class Presentation extends Component {
         </Slide>
         <Slide textSize={7}>
           <Heading size={6}>Extensibility</Heading>
-          <Text>Oni can be extended via plugins.</Text>
+          <Text textSize={25}>Oni can be extended via plugins.</Text>
           <br />
           <CodePane lang="javascript" source={pluginExample} />
           <Text textSize={25} margin="20px 0">
