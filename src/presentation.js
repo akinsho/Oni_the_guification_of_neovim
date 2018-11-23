@@ -233,6 +233,15 @@ export default class Presentation extends Component {
         </Slide>
         <Slide>
           <Heading size={6}>5min Demo 🙏 😟</Heading>
+          <Notes>
+            <ol>
+              <li>Input: show keypresses to start</li>
+              <li>Make fake function to show autocomplete and errors</li>
+              <li>open file with command palette</li>
+              <li>navigate with sneak (ctrl-g)</li>
+              <li>demo file explorer</li>
+            </ol>
+          </Notes>
         </Slide>
         <Slide>
           <Heading size={6}>Extensibility</Heading>
@@ -284,7 +293,7 @@ export default class Presentation extends Component {
         <Slide>
           <Text margin="10px 0 0" size={6} textAlign="left">
             We feel that whilst electron and typescript have provided us the
-            advantages of the ecosystem the tradeoff re. peformance might be too
+            advantages of the ecosystem the peformance tradeoff might be too
             great. So...
           </Text>
         </Slide>
