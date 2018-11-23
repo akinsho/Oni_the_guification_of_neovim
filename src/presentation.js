@@ -17,9 +17,9 @@ import {
   Notes,
   S
 } from "spectacle";
-import CodeSlide from 'spectacle-code-slide';
+import CodeSlide from "spectacle-code-slide";
 
-import pluginExample from './plugin-example'
+import pluginExample from "./plugin-example";
 
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
@@ -52,7 +52,6 @@ const theme = createTheme(
     secondary: "Helvetica"
   }
 );
-
 
 const Figure = styled("figcaption")`
   display: inline-block;
@@ -112,8 +111,9 @@ export default class Presentation extends Component {
             </Fill>
           </Layout>
           <Notes>
-            Big shout out to all of the people who have contributed to the project
-            Hoschi, PsxPaul, feltech and the all of the people who back the project
+            Big shout out to all of the people who have contributed to the
+            project Hoschi, PsxPaul, feltech and the all of the people who back
+            the project
           </Notes>
         </Slide>
         <Slide transition={["fade"]}>
@@ -139,10 +139,9 @@ export default class Presentation extends Component {
             limitations of a terminal UI
           </Text>
           <Notes>
-            Vim has classically been seen as a
-            terminal application, with the exception of MacVim.
-            That has changed since neovim, which can be embedded
-            inside other programs
+            Vim has classically been seen as a terminal application, with the
+            exception of MacVim. That has changed since neovim, which can be
+            embedded inside other programs
           </Notes>
         </Slide>
         <Slide>
@@ -157,19 +156,22 @@ export default class Presentation extends Component {
           </Text>
           <Notes>
             <ol>
-              <li>Its now possible to create an IDE with neovim at its core that
+              <li>
+                Its now possible to create an IDE with neovim at its core that
                 provides the power and speed of modal editing combined with the
                 nicieites and utilties of a GUI IDE
               </li>
               <li>
                 A key difference between Oni and alternatives like vscode or
-                sublime with a vim plugin is that at its core Oni is just neovim,
+                sublime with a vim plugin is that at its core Oni is just
+                neovim,
               </li>
               <li>
-                That means it uses your vim config with all your carefully crafted
-                mappings and scripts and you can use all of your plugins as normal
+                That means it uses your vim config with all your carefully
+                crafted mappings and scripts and you can use all of your plugins
+                as normal
               </li>
-          </ol>
+            </ol>
           </Notes>
         </Slide>
         <Slide>
@@ -189,7 +191,7 @@ export default class Presentation extends Component {
           <Heading size={6}>Oni's Architecture</Heading>
           <Text margin="10px 0 0" size={6} textAlign="left">
             Oni is an electron app, written with React & Typescript which speaks
-            with Neovim via it's <S type="italics">msgpack API</S>.
+            with Neovim via it's <S type="italics">msgpack API</S>. The editor text is rendered via webgl or canvas
           </Text>
           <Notes>
             Describe the advantages (well supported, cross-platform) and
@@ -198,7 +200,7 @@ export default class Presentation extends Component {
           </Notes>
         </Slide>
         <Slide>
-          <Heading size={6}>Where are we now?</Heading>
+          <Heading size={6}>Where are we now? 🤔</Heading>
           <Layout>
             <Fill>
               <Text fit>
@@ -230,27 +232,31 @@ export default class Presentation extends Component {
           </Layout>
         </Slide>
         <Slide>
+          <Heading size={6}>5min Demo 🙏 😟</Heading>
+        </Slide>
+        <Slide>
           <Heading size={6}>Extensibility</Heading>
           <Text textSize={25}>Oni can be extended via plugins.</Text>
           <br />
-          <CodePane source={pluginExample} lang="js"/>
+          <CodePane source={pluginExample} lang="js" />
           <Notes>
             <ol>
               <li> Here is a section of code for Oni's status bar</li>
               <li>
-                An Oni plugin specifies an activate method, which oni
-                picks up on startup
+                An Oni plugin specifies an activate method, which oni picks up
+                on startup
               </li>
               <li>
-                each activate function is passed the Oni object which is an exposed section of Oni's
-                api. With it you can create statusbar items or menus, sidebar items etc.
+                each activate function is passed the Oni object which is an
+                exposed section of Oni's api. With it you can create statusbar
+                items or menus, sidebar items etc.
               </li>
               <li>
                 this example shows how to create a status bar item with a github
                 logo and which on click opens the repo on github
               </li>
             </ol>
-        </Notes>
+          </Notes>
         </Slide>
         <Slide>
           <Heading size={6}>Some Oni Plugins</Heading>
