@@ -31,9 +31,12 @@ import manuel from "./images/manuel.jpg";
 import tal from "./images/tal.jpg";
 import me from "./images/akin.jpg";
 
+import v2architecture from "./images/v2-architecture.png"
+import monzoLogo from "./images/monzo.png"
 import oniLogo from "./images/oni-header.png";
 import gitblamePlugin from "./images/git_blame.png";
 import imageLayerPlugin from "./images/image_layer_plugin.png";
+import csvLayerPlugin from "./images/csv_layer_plugin.png"
 import syntaxHighlighting from "./images/highlighting.png";
 import lspGif from "./images/lsp.gif";
 
@@ -81,8 +84,13 @@ export default class Presentation extends Component {
         <Slide textSize={40}>
           <p>Hi 👋🏾</p>
           <p>Software Developer</p>
-          <p>@Monzo in the UK</p>
-          <p>Twitter => @Akin_So</p>
+          <figure>
+            <Image width="100px" src={monzoLogo}/>
+            <figcaption>Monzo</figcaption>
+          </figure>
+          <p>Based in the UK</p>
+          <p>Github => <S type="underline">Akin909</S></p>
+          <p>Twitter => <S type="underline">@Akin_So</S></p>
         </Slide>
         <Slide textColor="tertiary">
           <Heading size={6}>The Team</Heading>
@@ -283,6 +291,12 @@ export default class Presentation extends Component {
           <Image src={imageLayerPlugin} />
         </Slide>
         <Slide>
+          <Heading size={6} margin={2}>
+            CSV Layer Plugin
+          </Heading>
+          <Image height="20em" src={csvLayerPlugin} />
+        </Slide>
+        <Slide>
           <Heading size={5}>Where are we going?</Heading>
           <Text margin="10px 0 0" size={6} textAlign="left">
             Performance has always been one of the major advantages of using
@@ -298,17 +312,17 @@ export default class Presentation extends Component {
           </Text>
         </Slide>
         <Slide>
-          <Text>We are prototyping Oni V2</Text>
+          <Text>We are prototyping Oni V2 (reOni?)</Text>
           <br />
           <Text>
             which will use a highly performant
             <S type="bold"> ReasonML</S> based desktop application framework we
             are developing called <S type="bold">Revery</S>.
           </Text>
-          <Text margin="15px 0 0 0">
-            This will eliminate the need to ship a chromium browser with the
-            app.
-          </Text>
+        </Slide>
+        <Slide>
+          <Heading margin="0 0 20px 0" size={6}>reOni (Oni V2) Proposed architecture</Heading>
+          <Image src={v2architecture} />
         </Slide>
         <Slide>
           <Heading size={6}>Useful Links</Heading>
