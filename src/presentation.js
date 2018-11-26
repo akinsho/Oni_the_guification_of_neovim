@@ -17,7 +17,6 @@ import {
   Notes,
   S
 } from "spectacle";
-import CodeSlide from "spectacle-code-slide";
 
 import pluginExample from "./plugin-example";
 
